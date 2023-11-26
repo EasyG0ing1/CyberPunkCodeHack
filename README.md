@@ -25,7 +25,7 @@ Most of the time, it will only give you one solution. The larger your buffer is,
 
 Lets break it down...
 
-We'll use this example and go through the com.simtechdata.process:
+We'll use this example and go through the process:
 
 ![](images/ScreenCap1.png)
 
@@ -37,7 +37,7 @@ So you take the size of your buffer and enter it in first (subsequent uses of th
 
 Then you just ype each sequence on a line separating the values with a space and hit enter. Then hit enter on a blank line to start the cracking.
 
-You can see from this example, that it found three solutions that could work. So the com.simtechdata.process of finding which solution you can enter is a matter of following the rules of the code matrix.
+You can see from this example, that it found three solutions that could work. So the process of finding which solution you can enter is a matter of following the rules of the code matrix.
 
 The rules of the code matrix are simple. You **ALWAYS** start with the **TOP ROW** and select a value. After that, you follow the pattern of selecting your next value from the **COLUMN** that your first value is in. Then select your next value from the **ROW** that number is in... the pattern repeats: column, row, column, row etc...
 
