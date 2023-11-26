@@ -14,7 +14,7 @@ Installation is easy. Simply download the executable for your operating system [
 ### Why use this program?
 That's easy, this program will always give you the solution that includes all three sequences without failing. If there is no solution for all three sequences (and this will be determined by the size of your buffer), then it will just tell you that there are no solutions. But it's always nice to know so that you don't waste your time trying to figure out the solution for all three sequences.
 
-If there is no solution for all three sequences, then you need to try to manually figure it out for yourself or just pick a single sequence and enter it in, because the program does not currently check subsets of sequences. However, no solution scenarios will be the exception and not the norm. You can increase your chances of getting all three by getting ;lsakdj;kljfksldj with larger buffers.
+If there is no solution for all three sequences, then you need to try to manually figure it out for yourself or just pick a single sequence and enter it in, because the program does not currently check subsets of sequences. However, no solution scenarios will be the exception and not the norm. You can increase your chances of getting all three by going to a ripper doc and upgrading your operating system. Buffer size is the attribute you're looking to increase for this purpose, but I recommend getting as much base RAM, Buffer Size and Slots as you can afford.
 
 ### How to use the program
 The concept is very simple. You first enter in the size of your buffer, then you enter in each required sequence and the program will give you all possible solutions for the sequences you gave it. Then you simply figure out which solution actually works from the Code Matrix it gives you.
@@ -62,4 +62,4 @@ The third solution also runs into dead ends as the first solution did.
 
 The more you do this, the faster you will get. The benefit of this program is that you will know very quickly what the solution is and when you fit that solution into your code matrix and then select the solution on your screen in the right order, you'll get it every time!
 
-# Get those Eddys!
+# Get those Eddies!
