@@ -44,7 +44,7 @@ The rules of the code matrix are simple. You **ALWAYS** start with the **TOP ROW
 So lets look at the first solution it gave us: **55 1C 1C E9 BD E9 55**
 
 
-Since the top row only has one **55** then we start there and we try to find the rest of the numbers following the rule pattern. Since the second number is **1C** we have two choices for the next value to select, but being mindful of the number following that one, you will want to look at the rows of those two options to see if the third number is there in that row, and in both cases here, the thrid number which is also **1C** exists in both rows, so we will start with the first **1C* in the column and follow that out...
+Since the top row only has one **55** then we start there and we try to find the rest of the numbers following the rule pattern. Since the second number is **1C** we have two choices for the next value to select, but being mindful of the number following that one, you will want to look at the rows of those two options to see if the third number is there in that row, and in both cases here, the third number which is also **1C** exists in both rows, so we will start with the first **1C* in the column and follow that out...
 
 To simplify, here are the possible options to follow for the first solution:
 
