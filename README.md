@@ -11,6 +11,8 @@ This program runs on Linux, MacOS, or Windows (tested on Windows 11). **IT WILL 
 
 Installation is easy. Simply download the executable for your operating system [from here](https://github.com/EasyG0ing1/CyberPunkCodeHack/releases) and place it into a folder that is somewhere on your PATH. OR, just make a folder for it and put it in there, but every time you run it, you will need to CD into that folder first.
 
+The program was compiled into each operating systems native-code format. This means that there is no Java VM running at all nor is one needed.
+
 ### Why use this program?
 That's easy, this program will always give you the solution that includes all three sequences without failing. If there is no solution for all three sequences (and this will be determined by the size of your buffer), then it will just tell you that there are no solutions. But it's always nice to know so that you don't waste your time trying to figure out the solution for all three sequences.
 
