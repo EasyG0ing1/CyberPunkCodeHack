@@ -1,5 +1,9 @@
 package com.simtechdata.process;
 
+import com.simtechdata.process.models.Solution;
+import com.simtechdata.process.models.ValueSet;
+
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -31,7 +35,7 @@ public class Handler {
     private static int startSetIndex;
     private static String[] solSet;
     private static boolean solutionFull;
-    private static final LinkedList<String[]> solutionList = new LinkedList<>();
+    private static final LinkedList<Solution> solutionList = new LinkedList<>();
 
 
     public static void setBufferSize(int size) {
@@ -43,18 +47,25 @@ public class Handler {
         mapIndex++;
     }
 
-    public static LinkedList<String[]> getSolutionList() {
+    public static LinkedList<Solution> getSolutionList() {
         findSolutions();
+        solutionList.sort(Comparator.comparing(Solution::getSize));
         return solutionList;
     }
 
-    public static void findSolutions() {
-        int lastNumber = mapIndex - 1;  // Replace this with your actual last number
+    public static void reset() {
+        setMap.clear();
+        solutionList.clear();
+        mapIndex = 1;
+    }
+
+    private static void findSolutions() {
+        int lastNumber = mapIndex - 1;
         for (int i = 1; i <= lastNumber; i++) {
             solSet = newSolutionSet();
             boolean failed = false;
             solutionFull = false;
-            reset();
+            resetValues();
             boolean solved = false;
             startSet = setMap.get(i).getCoreSet();
             startSetIndex = 0;
@@ -77,7 +88,7 @@ public class Handler {
                 solved = allLoaded();
             }
             if (!failed) {
-                solutionList.addLast(solSet);
+                solutionList.addLast(new Solution(solSet));
             }
         }
     }
@@ -113,7 +124,7 @@ public class Handler {
         return allLoaded;
     }
 
-    private static void reset() {
+    private static void resetValues() {
         for (ValueSet valueSet : setMap.values()) {
             valueSet.reset();
         }
@@ -140,6 +151,18 @@ public class Handler {
             set[x] = "";
         }
         return set;
+    }
+
+    public static boolean readyToSolve() {
+        return !setMap.isEmpty();
+    }
+
+    public static LinkedList<ValueSet> getSequences() {
+        LinkedList<ValueSet> sequences = new LinkedList<>();
+        for(ValueSet vs : setMap.values()) {
+            sequences.addLast(vs);
+        }
+        return sequences;
     }
 
 }

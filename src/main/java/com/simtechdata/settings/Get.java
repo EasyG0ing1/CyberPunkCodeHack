@@ -16,4 +16,8 @@ public class Get {
     public int bufferSize() {
         return prefs.getInt(BUFFER_SIZE.name(), 0);
     }
+
+    public boolean stealthMode() {
+        return prefs.getBoolean(STEALTH_MODE.name(), false);
+    }
 }

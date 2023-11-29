@@ -17,4 +17,9 @@ public class Set {
         AppSettings.clear.bufferSize();
         prefs.putInt(BUFFER_SIZE.name(), value);
     }
+
+    public void stealthMode(boolean value) {
+        AppSettings.clear.stealthMode();
+        prefs.putBoolean(STEALTH_MODE.name(), value);
+    }
 }

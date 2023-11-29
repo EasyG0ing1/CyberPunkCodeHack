@@ -1,0 +1,11 @@
+{
+  "resources": {
+    "includes": [
+      {"pattern": ".*/pom.*xml$"},
+      {"pattern": ".*/pom.*properties$"}
+    ],
+    "excludes": [
+      {"pattern": ""}
+    ]
+  }
+}

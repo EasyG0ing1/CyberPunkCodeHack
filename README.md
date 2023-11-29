@@ -6,6 +6,10 @@ This little program will help you solve the in game code hacking (breeching) puz
 
 This program will be run from within a terminal or a command prompt in Windows.
 
+### For information related to the update, run
+`cphack help` and
+`cphack info`
+
 ### Installation
 This program runs on Linux, MacOS, or Windows (tested on Windows 11). **IT WILL NOT WORK ON SMARTPHONES!**
 
@@ -37,11 +41,15 @@ So you take the size of your buffer and enter it in first (subsequent uses of th
 
 Then you just ype each sequence on a line separating the values with a space and hit enter. Then hit enter on a blank line to start the cracking.
 
+OR ... you can enter all sequences in on a single line
+
+![](images/ScreenCap3.png)
+
 You can see from this example, that it found three solutions that could work. So the process of finding which solution you can enter is a matter of following the rules of the code matrix.
 
-The rules of the code matrix are simple. You **ALWAYS** start with the **TOP ROW** and select a value. After that, you follow the pattern of selecting your next value from the **COLUMN** that your first value is in. Then select your next value from the **ROW** that number is in... the pattern repeats: column, row, column, row etc...
+The rules of the code matrix are simple. You **ALWAYS** start with the **TOP ROW** (even if your first number isn't in the top row (run `cphack info` for details) and select a value. After that, you follow the pattern of selecting your next value from the **COLUMN** that your first value is in. Then select your next value from the **ROW** that number is in... the pattern repeats: column, row, column, row etc...
 
-So lets look at the first solution it gave us: **55 1C 1C E9 BD E9 55**
+So lets look at one of the solutions it gave us: **55 1C 1C E9 BD E9 55**
 
 
 Since the top row only has one **55** then we start there and we try to find the rest of the numbers following the rule pattern. Since the second number is **1C** we have two choices for the next value to select, but being mindful of the number following that one, you will want to look at the rows of those two options to see if the third number is there in that row, and in both cases here, the third number which is also **1C** exists in both rows, so we will start with the first **1C* in the column and follow that out...
@@ -58,7 +66,9 @@ actually does fit on the code matrix and if you work it out for yourself, you wi
 
 ![](images/Solution.png)
 
-The third solution also runs into dead ends as the first solution did.
+The short solution could be made to work if you have the buffer space for it. You could select the wrong code as the first value, then enter the correct sequence after entering in the wrong number like this:
+
+![](images/Alternate.png))
 
 ### Practice Makes Perfect
 
